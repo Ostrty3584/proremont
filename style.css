@@ -6,6 +6,31 @@ body {
     padding: 40px;
 }
 
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+    input, textarea, button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+
 h1 {
     font-size: 70px;
     text-align: center;
