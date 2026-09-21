@@ -3,90 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proremont 2.0</title>
+    <meta name="description" content="ProRemont - remonty mieszkań i szybka wycena prac remontowych.">
+    <title>ProRemont | Remonty mieszkań</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
 
 <body>
+    <header class="site-header">
+        <p class="logo">ProRemont</p>
+        <p class="tagline">Remonty mieszkań bez stresu</p>
+        <nav class="site-nav" aria-label="Nawigacja główna">
+            <a href="#kalkulator">Wycena</a>
+            <a href="#uslugi">Usługi</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
 
-    <h1>Proremont 2.0</h1>
+    <main>
+        <section class="calculator-section" id="kalkulator">
+            <h1>Kalkulator wyceny remontu</h1>
+            <p>Podaj powierzchnię mieszkania i cenę remontu za m².</p>
 
-    <h2>Remonty mieszkań bez stresu</h2>
+            <div class="calculator-fields">
+                <label>
+                    Imię:
+                    <input id="name" type="text" placeholder="np. Jan">
+                </label>
 
+                <label>
+                    Email:
+                    <input id="email" type="email" placeholder="np. jan@wp.pl">
+                </label>
 
-    <h1>ProRemont</h1>
+                <label>
+                    Powierzchnia:
+                    <input id="area" type="number" placeholder="np. 50">
+                </label>
 
-    <h2>Kalkulator wyceny remontu</h2>
+                <label>
+                    Cena za m²:
+                    <input id="price" type="number" placeholder="np. 120">
+                </label>
+            </div>
 
-    <p>Podaj powierzchnię mieszkania i cenę remontu za m².</p>
+            <button id="calculateButton">Wyślij wycenę</button>
+            <h2 id="result"></h2>
+        </section>
 
-     <label>
-        Imię:
-        <input id="name" type="text" placeholder="np. Jan">
-    </label>
-
-    <br><br>
-
-    <label>
-        email:
-        <input id="email" type="email" placeholder="np. jan@wp.pl">
-    </label>
-
-    <br><br>
-
-    <label>
-        Powierzchnia:
-        <input id="area" type="number" placeholder="np. 50">
-    </label>
-
-    <br><br>
-
-    <label>
-        Cena za m²:
-        <input id="price" type="number" placeholder="np. 120">
-    </label>
-
-    <br><br>
-
-    <button id="calculateButton">Wyślij wycenę</button>
-
-    <h2 id="result"></h2>
-
-    <section class="services">
+        <section class="services" id="uslugi">
         <h2>Usługi i przykładowe ceny</h2>
         <button id="servicesToggle" type="button" aria-expanded="false" aria-controls="servicesList">Pokaż usługi</button>
         <ul id="servicesList" hidden>
-            <li>Malowanie ścian: 25 zł/m²</li>
-            <li>Gładzie gipsowe: 45 zł/m²</li>
-            <li>Układanie paneli: 55 zł/m²</li>
-            <li>Remont łazienki: od 8 000 zł</li>
-            <li>Instalacja elektryczna: od 150 zł/punkt</li>
-            <li>Instalacja hydrauliczna: od 200 zł/punkt</li>
+            <li><span>Malowanie ścian</span><strong>25 zł/m²</strong></li>
+            <li><span>Gładzie gipsowe</span><strong>45 zł/m²</strong></li>
+            <li><span>Układanie paneli</span><strong>55 zł/m²</strong></li>
+            <li><span>Remont łazienki</span><strong>od 8 000 zł</strong></li>
+            <li><span>Instalacja elektryczna</span><strong>od 150 zł/punkt</strong></li>
+            <li><span>Instalacja hydrauliczna</span><strong>od 200 zł/punkt</strong></li>
         </ul>
-    </section>
+        </section>
 
-    <section class="contact-info">
-        <h2>Kontakt</h2>
-        <p>Telefon: <a href="tel:+48123456789">123 456 789</a></p>
-        <p>Email: <a href="mailto:kontakt@proremont.pl">kontakt@proremont.pl</a></p>
-    </section>
+        <section class="contact-section" id="kontakt">
+            <div class="contact-info">
+                <h2>Kontakt</h2>
+                <p>Porozmawiajmy o Twoim remoncie.</p>
+                <p>Telefon: <a href="tel:+48123456789">123 456 789</a></p>
+                <p>Email: <a href="mailto:kontakt@proremont.pl">kontakt@proremont.pl</a></p>
+            </div>
 
-    <section class="contact-form">
-        <h2>Formularz kontaktowy</h2>
-        <form id="contactForm">
-            <label for="contactName">Imię:</label>
-            <input type="text" id="contactName" name="contactName" required>
+            <div class="contact-form">
+            <h2>Formularz kontaktowy</h2>
+            <form id="contactForm">
+            <label for="contactName">
+                Imię:
+                <input type="text" id="contactName" name="contactName" required>
+            </label>
 
-            <label for="contactEmail">Email:</label>
-            <input type="email" id="contactEmail" name="contactEmail" required>
+            <label for="contactEmail">
+                Email:
+                <input type="email" id="contactEmail" name="contactEmail" required>
+            </label>
 
-            <label for="message">Wiadomość:</label>
-            <textarea id="message" name="message" required></textarea>
+            <label for="message">
+                Wiadomość:
+                <textarea id="message" name="message" required></textarea>
+            </label>
 
             <button type="submit">Wyślij</button>
-        </form>
-    </section>
+            </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>ProRemont | Remonty mieszkań</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
